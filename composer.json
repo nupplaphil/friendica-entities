@@ -1,0 +1,42 @@
+{
+	"name": "friendica/entities",
+	"description": "Check and update Friendica entities",
+	"type": "library",
+	"keywords": [
+		"friendica",
+		"entities"
+	],
+	"license": "AGPL-3.0+",
+	"support": {
+		"issues": "https://github.com/friendica/friendica/issues"
+	},
+	"prefer-stable": true,
+	"require": {
+		"asika/simple-console": "^1.0",
+		"level-2/dice": "^4.0",
+		"nette/php-generator": "^3.3"
+	},
+	"config": {
+		"platform": {
+			"php": "7.1"
+		},
+		"optimize-autoloader": true,
+		"sort-packages": true
+	},
+	"bin": [
+		"friendica-entities"
+	],
+	"autoload": {
+		"psr-4": {
+			"Entities\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/"
+		]
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^7.5"
+	}
+}

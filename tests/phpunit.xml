@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="tests/bootstrap.php"
+         backupGlobals="false"
+         verbose="true">
+    <testsuites>
+        <testsuite name="friendica">
+            <directory suffix="Test.php">tests/Framework</directory>
+            <directory suffix="Test.php">tests/Extensions</directory>
+            <directory suffix="Test.php">tests/Runner</directory>
+            <directory suffix="Test.php">tests/Util</directory>
+        </testsuite>
+    </testsuites>
+
+	<!-- Filters for Code Coverage -->
+	<filter>
+		<whitelist>
+			<directory suffix=".php">..</directory>
+			<exclude>
+				<directory suffix=".php">../src</directory>
+			</exclude>
+		</whitelist>
+	</filter>
+</phpunit>

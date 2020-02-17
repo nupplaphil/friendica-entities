@@ -1,0 +1,13 @@
+language: php
+
+sudo: false
+
+before_install:
+  - composer self-update
+  - composer clear-cache
+
+script:
+  -  vendor/bin/phpunit --configuration tests/phpunit.xml --coverage-clover clover.xml
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
